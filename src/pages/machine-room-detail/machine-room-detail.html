@@ -1,0 +1,46 @@
+<!--
+  Generated template for the MachineRoomDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+<ion-toolbar color="primary">
+  <ion-buttons left>
+      <button ion-button icon-only (click)="goback();">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{room?.name}}</ion-title>
+    
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<ion-list>
+    <ion-item><div class="item-label">我方名义：</div><div class="item-info">{{room?.deptName}}</div></ion-item>
+    <ion-item><div class="item-label">采购人：</div><div class="item-info">{{room?.purchaseStaff}}</div></ion-item>
+    <ion-item><div class="item-label">业务状态：</div><div class="item-info">{{room?.businessType}}</div></ion-item>
+    <ion-item><div class="item-label">联系方式：</div><div class="item-info">{{room?.connectWith}}</div></ion-item>
+    <ion-item><div class="item-label">所在城市：</div><div class="item-info">{{room?.areaName}}{{room?.cityName}}</div></ion-item>
+    <ion-item text-wrap>
+      <ion-grid>
+        <ion-row>
+        <ion-col col-auto class="item-label">联系地址：</ion-col>
+        <ion-col class="item-info">{{room?.address}}</ion-col>
+       </ion-row>
+      </ion-grid>
+      </ion-item>
+  </ion-list>
+
+  <div style="padding:px;margin-top:1.25rem;">
+    <ion-list>
+    <a ion-item (click)="gotoReceiver();"><div class="item-label">收货信息</div></a>
+    <a ion-item><div class="item-label">维护信息</div></a>
+    <a ion-item><div class="item-label">资源信息</div></a>
+    <a ion-item><div class="item-label">其他信息</div></a>
+  </ion-list>
+  </div>
+</ion-content>

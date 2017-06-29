@@ -1,3 +1,52 @@
 page-home {
 
+    .info-title{
+        margin-left: 16px;
+        margin-top: 33px;
+        margin-bottom: 9px;
+        font-family: STHeitiSC-Medium;
+        font-size: 13px;
+        color: #6E6D72;
+        letter-spacing: 0;
+    }
+    ion-grid.grid{
+        padding: 0;
+        margin: 0px;
+        background-color: rgba(255, 255, 255, 75);
+    }
+
+    ion-grid ion-row ion-col.col{
+        height: 90px;
+        text-align: center;
+        padding-top: 0px;
+    }
+
+    ion-grid ion-row ion-col .img-div{
+        margin-top: 15px;
+        padding: 0px;
+    }
+    ion-grid ion-row ion-col .title-div{
+        margin-top: 6px;
+        padding: 0px;
+        font-family: STHeitiSC-Light;
+        font-size: 13px;
+        color: #212121;
+        letter-spacing: 0;
+    }
+
+.item-block{
+    min-height: 2rem;
+}
+    div.scroll-content > ion-list > a > ion-thumbnail{
+        min-width: 2rem;
+        min-height: 2rem;
+    }
+
+    div.scroll-content > ion-list > a> div.item-inner > div > ion-label{
+        font-family: STHeitiSC-Medium;
+        font-size: 14px;
+        color: #3D3D3D;
+        letter-spacing: -0.34px;
+    }
+
 }

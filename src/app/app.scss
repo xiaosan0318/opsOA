@@ -14,3 +14,54 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+    *{
+        font-size: 1.17rem;
+    }
+
+    ion-header > ion-navbar > div.toolbar-content > ion-title > div{
+        font-family: STHeitiSC-Medium;
+        font-size: 1.5rem;
+        letter-spacing: 0;
+    }
+
+    ion-header > ion-toolbar > div.toolbar-content > ion-title > div{
+        font-family: STHeitiSC-Medium;
+        font-size: 1.5rem;
+        letter-spacing: 0;
+    }
+
+
+
+   .content-ios, .content-md{
+        background-color:#F0EFF5;
+    }
+
+    .item-label{
+        float: left;
+        padding: 0px;
+        margin: 0px;
+        font-family: STHeitiSC-Light;
+        font-size: 14px;
+        color: #3D3D3D;
+        letter-spacing: -0.34px;
+    }
+
+    .item-info{
+        float: left;
+        padding: 0px;
+        margin: 0px;
+        font-family: STHeitiSC-Medium;
+        font-size: 14px;
+        color: #3D3D3D;
+        letter-spacing: -0.34px;
+    }
+
+    .grid{
+        padding: 0px;
+    }
+
+    .item-block{
+        min-height: 3.4rem;
+    }
+    

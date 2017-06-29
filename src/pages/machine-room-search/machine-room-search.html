@@ -1,0 +1,42 @@
+<!--
+  Generated template for the MachineRoomSearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+<ion-toolbar color="primary">
+  <ion-buttons left>
+      <button ion-button icon-only (click)="goback();">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>机房信息筛选</ion-title>
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="search-item">
+    <div class="search-label">机房名称</div>
+    <div class="search-content">
+        <input [(ngModel)]="roomName" type="text"/>
+    </div>
+  </div>
+
+  <div class="search-item">
+    <div class="search-label">业务类型</div>
+    <div class="search-content">
+        <div style="text-align: center;margin-left:-16px;">
+        <div [attr.class]= "businessType.YES ? 'check' : 'uncheck'" (click)="businessType.YES = !businessType.YES">有业务</div>
+        <div [attr.class]= "businessType.NO ? 'check' : 'uncheck'" (click)="businessType.NO = !businessType.NO">无业务</div>
+        </div>
+        
+    </div>
+  </div>
+
+  <div class = "button-div">
+    <button ion-button full (click)="query();">确定</button>
+  </div>
+
+</ion-content>

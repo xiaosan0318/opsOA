@@ -1,5 +1,11 @@
 {
   "name": "opsOA",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/mobileApi",
+      "proxyUrl": "http://localhost:9090/mobileApi"
+    }
+  ]
 }

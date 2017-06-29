@@ -1,17 +1,81 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>
+      {{user?.staff}}
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <div class="info-title">功能</div>
+  <ion-grid>
+    <ion-row>
+      <ion-col (click)="gotoView('jifang')">
+        <div class="img-div"><img src="assets/icon/jifang.png" style="height: 42px"/></div>
+        <div class="title-div">机房信息</div>
+      </ion-col>
+      <ion-col >
+        <div class="img-div"><img src="assets/icon/jigui.png" style="height: 42px"/></div>
+        <div class="title-div">机柜信息</div>
+      </ion-col>
+      <ion-col >
+        <div class="img-div"><img src="assets/icon/shebei.png" style="height: 42px"/></div>
+        <div class="title-div">设备信息</div>
+      </ion-col>
+      <ion-col >
+        <div class="img-div"><img src="assets/icon/shangjia.png" style="height: 42px"/></div>
+        <div class="title-div">上架工单</div>
+      </ion-col>
+    </ion-row>  
+    <ion-row>
+      <ion-col >
+        <div class="img-div"><img src="assets/icon/xiajia.png" style="height: 42px"/></div>
+        <div class="title-div">下架工单</div>
+      </ion-col>
+      <ion-col >
+        <div class="img-div"><img src="assets/icon/shebeibiangeng.png" style="height: 42px"/></div>
+        <div class="title-div">设备变更</div>
+      </ion-col>
+      <ion-col >
+        <div class="img-div"><img src="assets/icon/kefu.png" style="height: 42px"/></div>
+        <div class="title-div">客服任务单</div>
+      </ion-col>
+      <ion-col >
+        <div class="img-div"></div>
+        <div class="title-div"></div>
+      </ion-col>
+    </ion-row>  
+  </ion-grid>
+
+  <div class="info-title">带指派工单</div>
+  <ion-list >
+    <a ion-item detail-push >
+      <ion-thumbnail item-start>
+        <img src="assets/icon/shangjia.png" style="height: 22px;width:22px;"/>
+      </ion-thumbnail>
+      <h3>上架工单</h3>
+      <ion-badge color="danger" item-end>1</ion-badge>
+    </a>
+    <a ion-item  >
+      <ion-thumbnail item-start>
+        <img src="assets/icon/xiajia.png" style="height: 22px;width:22px;"/>
+      </ion-thumbnail>
+      <h3>下架工单</h3>
+      <ion-badge color="danger" item-end>33</ion-badge>
+    </a>
+    <a ion-item  >
+      <ion-thumbnail item-start>
+        <img src="assets/icon/shebeibiangeng.png" style="height: 22px;width:22px;"/>
+      </ion-thumbnail>
+      <h3>设备变更单</h3>
+      <ion-badge color="danger" item-end>9</ion-badge>
+    </a>
+    <a ion-item  >
+      <ion-thumbnail item-start>
+        <img src="assets/icon/kefu.png" style="height: 22px;width:22px;"/>
+      </ion-thumbnail>
+      <h3>客服任务单</h3>
+      <ion-badge color="danger" item-end>5</ion-badge>
+    </a>
+  </ion-list>
 </ion-content>
