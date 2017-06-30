@@ -1,0 +1,51 @@
+<!--
+  Generated template for the MachinePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+<ion-toolbar color="primary">
+  <ion-buttons left>
+      <button ion-button icon-only (click)="goback();">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>设备信息</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="gotoSearch();">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+</ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <a ion-item  *ngFor="let machine of machines" (click)="gotoCabinetDetail(machine?.id);">
+      <div>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-auto align-self-center><img src="assets/icon/shebei_{{machine.type}}.png" style="height: 1.1rem;width:1.1rem;"/></ion-col>
+              <ion-col col-auto align-self-center><h2>{{machine?.name}}</h2></ion-col>
+              <ion-col col-auto align-self-center><p>{{machine?.code}}</p></ion-col>
+              <ion-col></ion-col>
+              <ion-col col-auto align-self-center><p>{{machine?.status}}</p></ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col><p>{{machine?.roomName}}</p></ion-col>
+              <ion-col col-auto><p text-right>{{machine?.cabinetName}}</p></ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+      </div>
+      </a>
+  </ion-list>
+
+
+</ion-content>

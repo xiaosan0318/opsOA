@@ -7,7 +7,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { MachineRoomService } from '../providers/machine-room.services';
-import { MachineRoomDetailService } from '../providers/machine-room-detail.services';
+import { CabinetService } from '../providers/cabinet.services';
+import { MachineService } from '../providers/machine.services';
 
 import { HttpModule } from "@angular/http";
 
@@ -30,7 +31,8 @@ import { HttpModule } from "@angular/http";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
     MachineRoomService,
-    MachineRoomDetailService
+    CabinetService,
+    MachineService
   ]
 })
 export class AppModule {}

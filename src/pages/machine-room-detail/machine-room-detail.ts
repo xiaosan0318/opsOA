@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,LoadingController } from 'ionic-angular';
-import { MachineRoomDetailService } from '../../providers/machine-room-detail.services';
+import { MachineRoomService } from '../../providers/machine-room.services';
 
 /**
  * Generated class for the MachineRoomDetailPage page.
@@ -18,7 +18,7 @@ export class MachineRoomDetailPage {
   id: any;
   room: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public roomDetailService: MachineRoomDetailService,public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public roomService: MachineRoomService,public loadingCtrl: LoadingController) {
     this.id = navParams.get("id");
     console.log("constructor");
   }
@@ -32,7 +32,7 @@ export class MachineRoomDetailPage {
 
     loading.present();
 
-    this.roomDetailService.get(this.id).subscribe(res=> {
+    this.roomService.getById(this.id).subscribe(res=> {
       this.room = res.data
       loading.dismiss();
     });

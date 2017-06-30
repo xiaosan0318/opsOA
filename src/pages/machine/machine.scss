@@ -1,0 +1,29 @@
+page-machine {
+
+    ion-content > div.scroll-content > ion-list > a{
+        padding: 0px;
+    }
+
+    ion-content > div.scroll-content > ion-list > a> div.item-inner > div > ion-label{
+        
+        padding-left: 3px;
+        padding-top: 3px;
+        margin: 0px;
+    }
+
+    ion-content > div.scroll-content > ion-list > a > div.item-inner > div > ion-label > div > ion-grid > ion-row > ion-col > h2{
+        font-family: STHeitiSC-Medium;
+        font-size: 12px;
+        color: #3D3D3D;
+        letter-spacing: -0.34px;
+    }
+
+    ion-content > div.scroll-content > ion-list > a > div.item-inner > div > ion-label > div > ion-grid > ion-row > ion-col > p{
+        font-family: STHeitiSC-Light;
+        font-size: 12px;
+        color: #3D3D3D;
+        letter-spacing: -0.29px;
+    }
+
+
+}

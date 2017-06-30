@@ -1,0 +1,50 @@
+<!--
+  Generated template for the CabinetSearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+<ion-toolbar color="primary">
+  <ion-buttons left>
+      <button ion-button icon-only (click)="goback();">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>机柜信息筛选</ion-title>
+</ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="search-item">
+    <div class="search-label">机柜名称</div>
+    <div class="search-content">
+        <input [(ngModel)]="cabinetName" type="text"/>
+    </div>
+  </div>
+
+  <div class="search-item">
+    <div class="search-label">机房名称</div>
+    <div class="search-content">
+        <input [(ngModel)]="roomName" type="text"/>
+    </div>
+  </div>
+
+  <div class="search-item">
+    <div class="search-label">租用状态</div>
+    <div class="search-content">
+        <div style="text-align: center;margin-left:-16px;margin-top:-8px;">
+          <div *ngFor="let hire of hireStatus" [attr.class]= "hire.isChecked ? 'check' : 'uncheck'" (click)="hire.isChecked = !hire.isChecked">{{hire.name}}</div>
+        </div>
+    </div>
+  </div>
+
+  <div class = "button-div">
+    <button ion-button full (click)="query();">确定</button>
+  </div>
+
+</ion-content>

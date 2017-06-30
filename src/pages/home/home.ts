@@ -24,6 +24,10 @@ export class HomePage {
   gotoView(type:string){
     if(type =='jifang'){
         this.navCtrl.push('MachineRoomPage');
+    }else if(type =='jigui'){
+        this.navCtrl.push('CabinetPage');
+    }else if(type =='shebei'){
+        this.navCtrl.push('MachinePage');
     }
     
   }

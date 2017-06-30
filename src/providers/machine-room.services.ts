@@ -17,6 +17,12 @@ export class MachineRoomService {
         .map((res: Response) => res.json());
     }
 
+    getById(id:string): Observable<any> {
+        let url = Constant.APP_URL + "/getMachineRoomById?id="+id;
+        return this.http.get(url)
+        .map((res: Response) => res.json());
+    }
+
 
     private handleError (error: any) {
         let errMsg = (error.message) ? error.message :

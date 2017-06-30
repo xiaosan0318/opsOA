@@ -1,0 +1,46 @@
+<!--
+  Generated template for the CabinetPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+<ion-toolbar color="primary">
+  <ion-buttons left>
+      <button ion-button icon-only (click)="goback();">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>机柜信息</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="gotoSearch();">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<ion-list>
+    <a ion-item  *ngFor="let cabinet of cabinets" (click)="gotoCabinetDetail(cabinet?.id);">
+      <div>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-auto align-self-end><h2>{{cabinet?.name}}</h2></ion-col>
+              <ion-col col-auto align-self-center><p>{{cabinet?.hireStatus}}</p></ion-col>
+              <ion-col></ion-col>
+              <ion-col col-auto align-self-center><p>{{cabinet?.type}}</p></ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col><p>{{cabinet?.roomName}}</p></ion-col>
+              <ion-col col-auto><p text-right>{{cabinet?.row}}</p></ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+      </div>
+      </a>
+  </ion-list>
+</ion-content>

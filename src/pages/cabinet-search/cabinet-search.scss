@@ -1,6 +1,6 @@
-page-machine-room-search {
+page-cabinet-search {
 
-    
+
     .search-item{
         margin-top: 15px;
         padding-left: 15px;
@@ -42,6 +42,7 @@ page-machine-room-search {
         line-height:3.0em; 
         vertical-align:middle;
         margin-left: 16px;
+        margin-top: 8px;
     }
 
     .uncheck{
@@ -57,12 +58,12 @@ page-machine-room-search {
         width: 7.5rem;
         line-height:3.0em; 
         margin-left: 16px;
-
+        margin-top: 8px;
     }
 
     .button-div{
-        height: 70%;
-        margin-bottom: 16px;
+        height: 40%;
+        margin-bottom: 32px;
         margin-left: auto;
         margin-right: auto;
         max-width: 95%;
